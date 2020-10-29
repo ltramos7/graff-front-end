@@ -1,19 +1,40 @@
 import React, {useState} from 'react'
 
 const SignupHooks = () => {
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
 
-    const handleInputChange = (event) => {
-        console.log(event.target.value)
-        // setFirstName(event.target.name)
+    const initialUserState = {
+        first_name: "",
+        last_name: "",
+        username: "",
+        password: ""
+    }
+
+    const [newUser, setNewUser] = useState({initialUserState})
+
+    const{first_name, last_name, username, password} = newUser
+
+    const handleInputChange = (e) => {
+        setNewUser({...newUser, [e.target.name]: e.target.value})
+        console.log(newUser)
     }
 
     const handleSubmit = (event) => {
         event.preventDefault()
         console.log("submit button clicked")
+        console.log(first_name, last_name, username, password)
+
+    //     const postObj = {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "applicaiton/json"
+    //         },
+    //         body: JSON.stringify(first_name,last_name, username, password)
+    //     }
+
+    //     fetch("http://localhost:3000/users", postObj)
+    //     .then(resp => resp.json())
+    //     .then(data => console.log(data))
+
     }
 
     
