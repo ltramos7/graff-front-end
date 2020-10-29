@@ -9,31 +9,30 @@ const SignupHooks = () => {
         password: ""
     }
 
-    const [newUser, setNewUser] = useState({initialUserState})
+    const [eachEntry, setEachEntry] = useState({initialUserState})
 
-    const{first_name, last_name, username, password} = newUser
+    const {first_name, last_name, username, password} = eachEntry
 
     const handleInputChange = (e) => {
-        setNewUser({...newUser, [e.target.name]: e.target.value})
-        console.log(newUser)
+        setEachEntry({...eachEntry, [e.target.name]: e.target.value})
+        console.log(eachEntry)
     }
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log("submit button clicked")
-        console.log(first_name, last_name, username, password)
+        console.log(eachEntry)
 
-    //     const postObj = {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "applicaiton/json"
-    //         },
-    //         body: JSON.stringify(first_name,last_name, username, password)
-    //     }
+        // const postObj = {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "applicaiton/json"
+        //     },
+        //     body: JSON.stringify(newUser)
+        // }
 
-    //     fetch("http://localhost:3000/users", postObj)
-    //     .then(resp => resp.json())
-    //     .then(data => console.log(data))
+        // fetch("http://localhost:3000/users", postObj)
+        // .then(resp => resp.json())
+        // .then(data => console.log(data))
 
     }
 

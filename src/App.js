@@ -2,6 +2,7 @@ import React from 'react';
 
 import Signup from './components/signup'
 import SignupHooks from './components/SignupHooks'
+import UserProfile from './components/UserProfile'
 
 
 
@@ -10,6 +11,7 @@ function App() {
     <div>
       {/* <Signup/> */}
       <SignupHooks/>
+      <UserProfile/>
 
       
     </div>
