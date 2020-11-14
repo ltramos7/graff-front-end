@@ -37,7 +37,7 @@ class Signup extends Component{
 
     render(){
         return(
-            <div>
+            <div className="navigation">
             <form onSubmit={this.handleSubmit}>
               <input name="first_name" type="text" placeholder="First Name" onChange={this.handleInputChange}/>
               <input name="last_name" type="text" placeholder="Last Name" onChange={this.handleInputChange}/>

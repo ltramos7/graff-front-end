@@ -1,8 +1,11 @@
 import React from 'react';
+import './scss/main.scss';
 
-import Signup from './components/signup'
+
+import Signup from './components/Signup'
 // import SignupHooks from './components/SignupHooks'
 import UserProfile from './components/UserProfile'
+import Navigation from './components/Navigation';
 
 // a hooks version of signup component might not be ideal. I have to lift the state to the app component.
 
@@ -14,9 +17,10 @@ import UserProfile from './components/UserProfile'
 function App() {
   return (
     <div>
-      <Signup/>
+      <Navigation/>
+      {/* <Signup/>  Might need to place this component within Navigation*/}
       {/* <SignupHooks/> */}
-      <UserProfile/>
+      {/* <UserProfile/> */}
 
       
     </div>

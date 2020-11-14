@@ -1,0 +1,14 @@
+.navigation-container{
+
+    background-color: blue;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(100px, 4fr));
+}
+
+.buttons{
+    grid-column: -1/-1;
+}
+
+.nav-btn{
+    background-color: pink;
+}
